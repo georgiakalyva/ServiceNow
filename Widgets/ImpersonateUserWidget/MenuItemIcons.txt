@@ -1,0 +1,26 @@
+Open your service portal home page in the Service Portal Designer and add the Impersonate User Entry widget to the page. Now impersonate User will show in the menu drop down for users with the impersonate role.
+Add icons to menu items
+
+If you want to add icons like you see in the screen shot above, follow these steps:
+
+    Open the Stock theme in the platform.
+    Add the following to CSS variables:
+
+#sp-nav-bar > ul:nth-child(2) > li.hidden-xs.dropdown.ng-scope.open > ul > li.ng-scope > a:before {
+	content: "\f08b"; /* Sign Out */
+    font-family: FontAwesome;
+    padding-right: 5px;
+}
+
+#sp-nav-bar > ul:nth-child(2) > li.hidden-xs.dropdown.ng-scope.open > ul > li:nth-child(1) > a:before {
+	content: "\f007"; /* Profile */
+    font-family: FontAwesome;
+    padding-right: 8px;
+}
+
+#impersonation:before {
+	content: "\f06e"; /* Impersonate User */
+    font-family: FontAwesome;
+    padding-right: 6px;
+    margin-left: -2px;
+}
